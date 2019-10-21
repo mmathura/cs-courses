@@ -1,0 +1,407 @@
+<menu>
+	<categories>
+		<category number="1">
+			<title>Pizzas</title>
+			<items>
+				<item id="11">
+					<name>Tomato &amp; Cheese</name>
+					<served_with></served_with>
+					<price small="5.50" large="9.75" regular="0.00"></price>
+				</item>
+				<item id="12">
+					<name>Onions</name>
+					<served_with></served_with>
+					<price small="6.85" large="10.85" regular="0.00"></price>
+				</item>
+				<item id="13">
+					<name>Peppers</name>
+					<served_with></served_with>
+					<price small="6.85" large="10.85" regular="0.00"></price>
+				</item>
+				<item id="14">
+					<name>Broccoli</name>
+					<served_with></served_with>
+					<price small="6.85" large="10.85" regular="0.00"></price>
+				</item>
+			</items>
+			<all_served_with>
+				<served_with>Extra Cheese</served_with>
+				<price small="1.25" large="1.85" regular="0.00"></price>
+			</all_served_with>
+	    </category>
+	    <category number="2">
+			<title>Combos</title>
+			<items>
+				<item id="21">
+					<name>2-way Combo</name>
+					<served_with></served_with>
+					<price small="7.95" large="11.80" regular="0.00"></price>
+				</item>
+				<item id="22">
+					<name>3-way Combo</name>
+					<served_with></served_with>
+					<price small="8.90" large="12.80" regular="0.00"></price>
+				</item>
+			</items>
+			<all_served_with>
+				<served_with>Extra Cheese</served_with>
+				<price small="1.25" large="1.85" regular="0.00"></price>
+			</all_served_with>
+	    </category>
+	    <category number="3"> 
+	    	<title>Specialty Pizzas</title>
+	    	<items> 
+				<item id="31">
+					<name>Three Aces Special</name>
+					<served_with></served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+				<item id="32">
+					<name>Mediterranean</name>
+					<served_with>Sliced Tomatoes, Olives, Spinach, Fresh Garlic, Mozzarella</served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+				<item id="33">
+					<name>Vegetarian</name>
+					<served_with>Sliced Tomatoes, Onion, Peppers, Mushrooms, Broccoli, Mozzarella</served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+				<item id="34">
+					<name>Meat Lovers</name>
+					<served_with>Pepperoni, Hamburg, Sausage &amp; Bacon</served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+				<item id="35">
+					<name>BBQ Grilled Chicken</name>
+					<served_with>Choice of Vegetables</served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+				<item id="36">
+					<name>Grecian Supreme</name>
+					<served_with>Grilled Chicken, Feta Cheese, Tomatoes, Kalamata Olives</served_with>
+					<price small="9.80" large="15.80" regular="0.00"></price>
+				</item>
+			</items>
+			<all_served_with>
+				<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+			</all_served_with>
+	    </category>
+	    <category number="4">
+	    	<title>Special Dinners</title>
+	    	<items>
+	    		<item id="41">
+					<name>Chicken Wing Dinner</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="42">
+					<name>Gyro Plate</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="43">
+					<name>Chicken Finger Plate</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="44">
+					<name>3 Piece Chicken Dinner</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="45">
+					<name>Cheeseburger Plate</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.25"></price>
+				</item>
+				<item id="46">
+					<name>Chicken Burger Plate</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.25"></price>
+				</item>
+				<item id="47">
+					<name>Double-cheeseburger Plate</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.75"></price>
+				</item>
+				<item id="48">
+					<name>Chicken Kabob Plate</name>
+					<served_with>With rice, salad &amp; pita bread</served_with>
+					<price small="0.00" large="0.00" regular="7.85"></price>
+				</item>
+				<item id="49">
+					<name>Steak Tips Dinner</name>
+					<served_with>Served with side salad &amp; French fries</served_with>
+					<price small="0.00" large="0.00" regular="8.25"></price>
+				</item>
+				<item id="410">
+					<name>Fish &amp; Chips Dinner</name>
+					<served_with>Served with side salad, French fries &amp; tartar sauce</served_with>
+					<price small="0.00" large="0.00" regular="7.35"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with>All Dinners served with French Fries and Salad</served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="5"> 
+	    	<title>Side Orders</title>
+	    	<items>
+	    		<item id="51">
+					<name>Onion Rings</name>
+					<served_with></served_with>
+					<price small="2.60" large="2.95" regular="0.00"></price>
+				</item>
+				<item id="52">
+					<name>French Fries</name>
+					<served_with></served_with>
+					<price small="2.25" large="2.65" regular="0.00"></price>
+				</item>
+				<item id="53">
+					<name>Spicy Fries</name>
+					<served_with></served_with>
+					<price small="2.60" large="2.95" regular="0.00"></price>
+				</item>
+				<item id="54">
+					<name>Chicken Wings</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.75"></price>
+				</item>
+				<item id="55">
+					<name>Buffalo Wings</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.75"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="6">
+	    	<title>Salads</title>
+	    	<items>
+	    		<item id="61">
+					<name>Garden</name>
+					<served_with></served_with>
+					<price small="3.50" large="4.50" regular="0.00"></price>
+				</item>
+				<item id="62">
+					<name>Greek</name>
+					<served_with></served_with>
+					<price small="4.50" large="5.50" regular="0.00"></price>
+				</item>
+				<item id="67">
+					<name>Kabob Salad</name>
+					<served_with>With Grilled Chicken &amp; Feta</served_with>
+					<price small="5.45" large="6.45" regular="0.00"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="7">
+	    	<title>Spaghetti or Ziti</title>
+	    	<items>
+	    		<item id="71">
+					<name>With Sauce</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="5.40"></price>
+				</item>
+				<item id="72">
+					<name>With Sausage</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="6.45"></price>
+				</item>
+				<item id="77">
+					<name>A La Three Aces</name>
+					<served_with>Sausage, Mushrooms, Bacon &amp; Ham, Topped with Sauce &amp; Mozzarella Cheese</served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="78">
+					<name>Eggplant Spaghetti</name>
+					<served_with>With Mozzarella Cheese</served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="79">
+					<name>Ziti Dinner</name>
+					<served_with>With Mozzarella Cheese</served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="8">
+	    	<title>Homemade Lasagna, Ravioli or Manicotti</title>
+	    	<items>
+	    		<item id="81">
+					<name>With Sauce</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="6.25"></price>
+				</item>
+				<item id="82">
+					<name>With Sausage</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+				<item id="83">
+					<name>With Meatball</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="7.25"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with>All Pasta Dinners Served with Garlic Bread and Salad</served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="9">
+	    	<title>Homemade Calzones</title>
+	    	<items>
+	    		<item id="91">
+					<name>Vegetarian</name>
+					<served_with></served_with>
+					<price small="0.00" large="7.35" regular="0.00"></price>
+				</item>
+				<item id="92">
+					<name>Sausage</name>
+					<served_with></served_with>
+					<price small="0.00" large="7.35" regular="0.00"></price>
+				</item>
+				<item id="93">
+					<name>Ham &amp; Cheese</name>
+					<served_with></served_with>
+					<price small="0.00" large="7.35" regular="0.00"></price>
+				</item>
+				<item id="94">
+					<name>Grecian</name>
+					<served_with>Fresh Tomatoes, Spinach, Feta</served_with>
+					<price small="0.00" large="7.35" regular="0.00"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with>All of the above come with mushrooms, peppers &amp; onions</served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="10"> 
+	    	<title>Wraps</title>
+	    	<items>
+	    		<item id="101">
+					<name>Turkey Club Wraps</name>
+					<served_with>Turkey, Cheese, Lettuce, Tomato, Onion, Mayo</served_with>
+					<price small="0.00" large="0.00" regular="4.95"></price>
+				</item>
+				<item id="102">
+					<name>Chicken Cobb</name>
+					<served_with>Grilled Chicken, Bacon, Cheese, Lettuce, Tomato, Onion, Honey Mustard</served_with>
+					<price small="0.00" large="0.00" regular="4.95"></price>
+				</item>
+				<item id="103">
+					<name>Greek Supreme</name>
+					<served_with>Feta Cheese, Black Olives, Lettuce, Tomato, Onion, Greek Dressing</served_with>
+					<price small="0.00" large="0.00" regular="4.95"></price>
+				</item>
+				<item id="104">
+					<name>Crispy Chicken</name>
+					<served_with>Chicken Finger, Lettuce, Tomato, Onion, Honey Mustard</served_with>
+					<price small="0.00" large="0.00" regular="4.95"></price>
+				</item>
+				<item id="105">
+					<name>Steak Wrap</name>
+					<served_with></served_with>
+					<price small="0.00" large="0.00" regular="4.95"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="11"> 
+	    	<title>Grinders</title>
+	    	<items>
+	    		<item id="111">
+					<name>Meatless</name>
+					<served_with></served_with>
+					<price small="4.50" large="4.95" regular="0.00"></price>
+				</item>
+				<item id="112">
+					<name>Hamburger</name>
+					<served_with></served_with>
+					<price small="4.50" large="4.95" regular="0.00"></price>
+				</item>
+				<item id="113">
+					<name>Cheeseburger</name>
+					<served_with></served_with>
+					<price small="4.75" large="5.75" regular="0.00"></price>
+				</item>
+				<item id="114">
+					<name>Sliced Turkey</name>
+					<served_with></served_with>
+					<price small="4.75" large="5.75" regular="0.00"></price>
+				</item>
+				<item id="1114">
+					<name>B.l.t.</name>
+					<served_with>Bacon, Lettuce, Tomato</served_with>
+					<price small="4.75" large="5.75" regular="0.00"></price>
+				</item>
+				<item id="1116">
+					<name>Three Aces Special</name>
+					<served_with>Turkey, Roast Beef &amp; Bacon</served_with>
+					<price small="3.30" large="6.40" regular="0.00"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with></served_with>
+				<price small="0.00" large="0.00" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	    <category number="12"> 
+	    	<title>Steak Subs</title>
+	    	<items>
+	    		<item id="121">
+					<name>Cheese Steak</name>
+					<served_with></served_with>
+					<price small="5.30" large="6.40" regular="0.00"></price>
+				</item>
+				<item id="122">
+					<name>Onion Steak</name>
+					<served_with></served_with>
+					<price small="5.20" large="6.20" regular="0.00"></price>
+				</item>
+				<item id="123">
+					<name>Pepper Steak</name>
+					<served_with></served_with>
+					<price small="5.20" large="6.20" regular="0.00"></price>
+				</item>
+				<item id="124">
+					<name>Mushroom Steak</name>
+					<served_with></served_with>
+					<price small="5.20" large="6.20" regular="0.00"></price>
+				</item>
+				<item id="125">
+					<name>Special Steak</name>
+					<served_with></served_with>
+					<price small="5.40" large="6.40" regular="0.00"></price>
+				</item>
+	    		<item id="126">
+					<name>Steak Bomb</name>
+					<served_with></served_with>
+					<price small="5.50" large="6.50" regular="0.00"></price>
+				</item>
+	    	</items>
+	    	<all_served_with>
+	    		<served_with>Each Additional Item on Steak Subs</served_with>
+				<price small="0.25" large="0.40" regular="0.00"></price>
+	    	</all_served_with>
+	    </category>
+	</categories>
+</menu>

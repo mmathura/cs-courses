@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+		<title>BART</title>
+
+		    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    		<script type="text/javascript"
+      			src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC0dLrfnpU-TQzXKw92koG8FKknu0uGeYU&sensor=false">
+    		</script>
+
+    	  <script type="text/javascript"> // globals 
+
+            var map = null;
+            var marker = new Array();
+            var trainLineCoordinates = new Array();
+            var infowindow = new Array();
+
+            function gettrainline() {
+
+              initialize();  // refresh goolge map 
+
+              var route_number = document.forms.routes_form.train_route.value; 
+
+              var xhr = null; // for XMLHttpRequest 
+
+              // to populate drop down menu 
+
+              try {
+
+                xhr = new XMLHttpRequest();
+
+              }
+              catch (e) {
+
+                xhr = new ActiveXObject(Microsoft.XMLHTTP);
+
+              }
+
+              if (xhr == null) {
+
+                alert("Ajax not supported by your browser");
+                return;
+
+              }
+
+              var url = "getstations.php?route_number=" + route_number;
+
+              xhr.onreadystatechange = function() {
+
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+
+                      // if responseText is not null, eval json object
+
+                      var stations = eval("(" + xhr.responseText + ")");
+
+                      // repeat process for all stations on a route
+
+                      for (var i = 0; i < stations.length; i++) {
+
+                        trainLineCoordinates[i] = new google.maps.LatLng(
+                          stations[i].latitude, 
+                          stations[i].longitude
+                        );
+
+                        marker[i] = new google.maps.Marker({
+                          position: trainLineCoordinates[i],
+                          map: map,
+                          title: stations[i].name}
+                        );
+
+                        // add info window for all stations 
+
+                        var contentString = "<b>" + stations[i].name + "</b><br>" + stations[i].eta; 
+
+                        // display eta information 
+
+                        infowindow[i] = new google.maps.InfoWindow({
+                                content: contentString
+                           });
+
+
+                        // fixes problem with multiple event listeners 
+
+                        function mouseevent(infowindow, map, marker) {
+                          return function() {infowindow.open(map,marker)};
+                        }
+
+                        google.maps.event.addListener(marker[i], 'click', 
+                          mouseevent(infowindow[i], map, marker[i])
+                        );
+
+                        // google.maps.event.addListener(marker[i], 'click', function() {
+                         // infowindow[i].open(map,marker[i]);
+                        // });
+
+                      }
+
+                      // ajax request to get colour
+
+                      try {
+
+                        xhr = new XMLHttpRequest();
+
+                      }
+                      catch (e) {
+
+                        xhr = new ActiveXObject(Microsoft.XMLHTTP);
+
+                      }
+
+                      if (xhr == null) {
+
+                        alert("Ajax not supported by your browser");
+                        return;
+
+                      }
+
+                      var url2 = "drawroute.php?route_number=" + route_number;
+                      var colour = null;
+
+                      xhr.onreadystatechange = function() {
+
+                          if (xhr.readyState == 4) {
+                              if (xhr.status == 200) {
+
+                                eval(xhr.responseText);
+
+                              }
+                              else 
+                                alert("Error with Ajax call: 3");
+                          }
+
+                      }
+
+                      xhr.open("GET", url2, true);
+                      xhr.send(null);
+
+                    }
+                    else 
+                      alert("Error with Ajax call: 2");
+                } 
+
+              }
+
+              xhr.open("GET", url, true);
+              xhr.send(null);
+
+            } // end gettrainline()
+
+      			function initialize() { // init google maps function 
+
+              // refresh goolge map to inital variables 
+
+              marker = new Array();
+              trainLineCoordinates = new Array();
+              infowindow = new Array();
+
+        			var mapOptions = {
+          					center: new google.maps.LatLng(37.7749295, -122.4194155), // San Fransisco, CA, USA
+          					zoom: 8,
+          					mapTypeId: google.maps.MapTypeId.ROADMAP
+        			    };
+
+        			map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+            } // end initialize() function 
+
+            function gettrainroutes() { // get train routes function 
+
+              var xhr = null; // for XMLHttpRequest 
+
+              // to populate drop down menu 
+
+              try {
+
+                xhr = new XMLHttpRequest();
+
+              }
+              catch (e) {
+
+                xhr = new ActiveXObject(Microsoft.XMLHTTP);
+
+              }
+
+              if (xhr == null) {
+
+                alert("Ajax not supported by your browser");
+                return;
+
+              }
+
+              var url = "gettrainroutes.php";
+
+              xhr.onreadystatechange = function() {
+
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+
+                      document.getElementById("routes").innerHTML = xhr.responseText;
+                      
+                    }
+                    else 
+                      alert("Error with Ajax call: 1");
+                } 
+
+              }
+
+              xhr.open("GET", url, true);
+              xhr.send(null);
+
+            } // end gettrainroutes()
+
+        </script>
+
+	</head>
+
+	<body onload="initialize(); gettrainroutes();">
+
+    <center><h4>BART</h4></center>
+    <p>
+      <center>
+
+        <!-- drop down menu to select the train routes -->
+        
+        <form name = "routes_form" method = "post" onsubmit = "gettrainline(); return false;">
+          <select name = "train_route" id="routes"></select>
+          <input type = "submit" value = "Go!"></input>
+        </form>
+
+      </center>
+    </p>
+
+    <div id="map_canvas" style="width:50%; height:50%"></div>
+    
+	</body>
+
+</html>

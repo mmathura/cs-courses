@@ -1,0 +1,5 @@
+data/speller.c.i
+data/dictionary.c.i
+data/Makefile.i
+data/questions.txt.i
+data/dictionary.h.i

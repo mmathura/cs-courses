@@ -1,0 +1,222 @@
+Active Record 
+-------------
+
+$this->db->like();
+$this->db->distinct();
+
+$this->db->count_all();
+
+
+jQM
+---
+
+o Download jQuery Mobile package
+
+
+Dievice Width
+-------------
+
+320 x 480
+760 x 1280
+
+cron job
+--------
+
+* * * 1 1 php /... /update.php
+crontab ~/crontab.txt
+
+crontab -l -- list
+crontab -r -- add
+crontab -e -- clear
+
+Functions
+---------
+
+json_encode(array( '...' => ..., ...), [JSON_PRETTYPRINT]);
+json_decode(...)
+mysql_fetch_array()
+
+x obj = eval("(" + json_str + ")");
+
+Data definition
+---------------
+
+o Create fas_courses table - faculty arts and science
+o Enable FULLTEXT search and TEXT attribute
+
+
+Fields
+------
+
+fas_courses
+course
+	cat_num
+	offered
+department
+	dept_short_name
+title
+description
+faculty_list
+	faculty
+        name
+          prefix
+          first
+          middle
+          last
+          suffix
+schedule
+      meeting 
+        day 
+        begin_time
+        end_time    
+meeting_locations
+      location 
+        building
+        room
+requirements
+      requirement 
+        type				// general education 	
+        name 				// area of study 
+
+
+Hash Table
+----------
+
+SimpleXMLElement Object ( [course] => Array ( [0] => SimpleXMLElement Object ( [@attributes] => Array ( [acad_year] => 2011 [cat_num] => 802 [offered] => Y ) [term] => fall term [department] => SimpleXMLElement Object ( [@attributes] => Array ( [code] => AAAS ) [dept_long_name] => Department of African and African American Studies [dept_short_name] => African and African American Studies ) [course_group] => African and African American Studies [course_number] => SimpleXMLElement Object ( [num_int] => 10 ) [title] => Introduction to African American Studies [course_type] => Lecture with sections [course_level] => Primarily for Undergraduates [credit] => Half course [meeting_text] => SimpleXMLElement Object ( ) [faculty_text] => SimpleXMLElement Object ( ) [description] => An exploration of some of the key texts and issues in African American Studies from a range of disciplinary perspectives. Members of the faculty deliver guest lectures in their own areas of specialization. [prerequisites] => SimpleXMLElement Object ( ) [notes] => Required of concentrators in the African American Studies track. Students who transfer into the concentration after their sophomore year may substitute another African and African American Studies course already taken if they satisfy the Director of Undergraduate Studies that it establishes a basic familiarity with the materials covered in African and African American Studies 10. This course, when taken for a letter grade, meets the General Education requirement for United States in the World or the Core area requirement for Historical Study A. This course fulfills the requirement that one of the eight General Education courses also engages substantially with Study of the Past. [instructor_approval_required] => N [faculty_list] => SimpleXMLElement Object ( [faculty] => Array ( [0] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [role] => H [id] => Fce6c33453887abb2e5fc47ce879c2b4b ) [name] => SimpleXMLElement Object ( [prefix] => SimpleXMLElement Object ( ) [first] => Henry [middle] => Louis [last] => Gates [suffix] => Jr. ) ) [1] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [role] => O [id] => Fdaa86c961e899227f7629c43efb263fc ) [name] => SimpleXMLElement Object ( [prefix] => SimpleXMLElement Object ( ) [first] => Evelyn [middle] => Brooks [last] => Higginbotham [suffix] => SimpleXMLElement Object ( ) ) ) ) ) [schedule] => SimpleXMLElement Object ( [meeting] => Array ( [0] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [optional] => N [type] => Lecture [day] => 1 [begin_time] => 1100 [end_time] => 1200 ) ) [1] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [optional] => N [type] => Lecture [day] => 3 [begin_time] => 1100 [end_time] => 1200 ) ) [2] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [optional] => Y [type] => Lecture [day] => 5 [begin_time] => 1100 [end_time] => 1200 ) ) ) ) [meeting_locations] => SimpleXMLElement Object ( [location] => SimpleXMLElement Object ( [@attributes] => Array ( [term] => 1 [building] => Emerson Hall [room] => 210 ) ) ) [requirements] => SimpleXMLElement Object ( [requirement] => Array ( [0] => SimpleXMLElement Object ( [@attributes] => Array ( [type] => Core Curriculum [name] => Historical Study A ) ) [1] => SimpleXMLElement Object ( [@attributes] => Array ( [type] => General Education [name] => United States in the World ) ) [2] => SimpleXMLElement Object ( [@attributes] => Array ( [type] => General Education [name] => Study of the Past ) ) ) ) ) [1] => SimpleXMLElement Object ( [@attributes] => Array ( [acad_year] => 2011 [cat_num] => 9428 [offered] => N [next_year_offered] => 2012 ) [term] => fall term [department] => SimpleXMLElement Object ( [@attributes] => Array ( [code] => AAAS ) [dept_long_name] => Department of African and African American Studies ...
+
+
+Browser
+-------
+
+... first iteration ...
+
+Connected successfully
+802YAfrican and African American StudiesIntroduction to African American StudiesAn exploration of some of the key texts and issues in African American Studies from a range of disciplinary perspectives. Members of the faculty deliver guest lectures in their own areas of specialization.HenryGatesEvelynHigginbotham111001200311001200511001200Emerson Hall210Core CurriculumHistorical Study AGeneral EducationUnited States in the WorldGeneral EducationStudy of the Past
+9428NAfrican and African American StudiesIntroduction to African StudiesThis course introduces students to the general outlines of African geography and history, as well as key controversies in the study of African health, social life, arts, and politics. Our aim is to give students a fundamental vocabulary and interdisciplinary methodology for the study of Africa. Throughout, we assume that Africa is not a unique isolate but a continent bubbling with internal diversity, historical change, and cultural connections beyond its shores.Core CurriculumForeign Cultures ...
+
+
+... second iteration ...
+
+Connected successfully
+
+802
+Y
+African and African American Studies
+Introduction to African American Studies
+An exploration of some of the key texts and issues in African American Studies from a range of disciplinary perspectives. Members of the faculty deliver guest lectures in their own areas of specialization.
+Henry Louis Gates Jr.
+Evelyn Brooks Higginbotham 
+1 1100 1200
+3 1100 1200
+5 1100 1200
+Emerson Hall 210
+Core Curriculum Historical Study A
+General Education United States in the World
+General Education Study of the Past
+
+
+9428
+N
+African and African American Studies
+Introduction to African Studies
+This course introduces students to the general outlines of African geography and history, as well as key controversies in the study of African health, social life, arts, and politics. Our aim is to give students a fundamental vocabulary and interdisciplinary methodology for the study of Africa. Throughout, we assume that Africa is not a unique isolate but a continent bubbling with internal diversity, historical change, and cultural connections beyond its shores.
+Core Curriculum Foreign Cultures ...
+
+
+... third iteration ... (in CI framework w/ JSON)
+
+Faculty of Arts and Science Courses
+
+Array ( [0] => Array ( [id] => 1 [cat_num] => 802 [offered] => Y [dept_short_name] => African and African American Studies [title] => Introduction to African American Studies [description] => An exploration of some of the key texts and issues in African American Studies from a range of disciplinary perspectives. Members of the faculty deliver guest lectures in their own areas of specialization. [faculty_list] => [" Henry Louis Gates Jr."," Evelyn Brooks Higginbotham "] [schedule] => [{"day":"1","begin_time":"1100","end_time":"1200"},{"day":"3","begin_time":"1100","end_time":"1200"},{"day":"5","begin_time":"1100","end_time":"1200"}] [meeting_locations] => [{"building":"Emerson Hall","room":"210"}] [requirements] => [{"type":"Core Curriculum","name":"Historical Study A"},{"type":"General Education","name":"United States in the World"},{"type":"General Education","name":"Study of the Past"}] ) [1] => Array ( [id] => 2 [cat_num] => 9428 [offered] => N [dept_short_name] => African and African American Studies [title] => Introduction to African Studies [description] => This course introduces students to the general outlines of African geography and history, as well as key controversies in the study of African health, social life, arts, and politics. Our aim is to give students a fundamental vocabulary and interdisciplinary methodology for the study of Africa. Throughout, we assume that Africa is not a unique isolate but a continent bubbling with internal diversity, historical change, and cultural connections beyond its shores. [faculty_list] => null [schedule] => null [meeting_locations] => null [requirements] => [{"type":"Core Curriculum","name":"Foreign Cultures"}] ) ...
+
+
+SQL
+---
+
+DROP TABLE *
+
+INSERT INTO * 
+( COL_NAME, ... )
+VALUE ( VALUE, ... )
+
+CREATE TABLE
+  DEFINITIONS, ...
+
+DELETE * FROM *
+
+INSERT INTO * 
+( COL_NAME, ... )
+VALUES ( VALUE, ... )
+
+TRUNCATE TABLE *
+
+SELECT ( COL_NAME, ... ) FROM * 
+WHERE MATCH ( VALUE, ... )
+AGAINST ' SEARCH_STR '
+ORDERBY * DESC
+
+
+jQUERY
+------
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+
+count bubles
+------------
+
+<ul data-role="listview" data-count-theme="b" data-inset="true">
+    <li><a href="#">Inbox <span class="ui-li-count">12</span></a></li>
+    ...
+</ul>
+
+
+collapsable
+-----------
+
+<div data-role="collapsibleset" data-theme="a" data-inset="false">
+    <div data-role="collapsible">
+    <h2>Mailbox</h2>
+        <ul data-role="listview">
+            <li><a href="index.html">Inbox <span class="ui-li-count">12</span></a></li>
+            ...
+        </ul>
+    </div>
+    <div data-role="collapsible">
+</div>
+
+
+split
+-----
+
+<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true">
+    <li><a href="#">
+    <h2>Broken Bells</h2>
+        </a><a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+    <li><a href="#">
+    <h2>Phoenix</h2>
+        </a><a href="#purchase" data-theme="a" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+    </li>
+</ul>
+
+
+Formatted content
+-----------------
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+    <li><a href="index.html">
+    <h2>Stephen Weber</h2>
+    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+    </a></li>
+    ...
+</ul>
+
+
+
+

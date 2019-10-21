@@ -1,0 +1,10 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+i.   The game of fifteen framework allows for a board up to 9 x 9 cells in size.
+ii.  The data structure used to represent the board is a two-dimensional array.  
+iii. The greet() function is called to greet the players. 
+iv.  The functions that need to be implemented are:
+            init(), draw(), move(), won().
